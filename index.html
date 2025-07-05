@@ -18,6 +18,21 @@
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .fade-in {
+                animation: fadeIn 1s ease-in;
+            }
+            @keyframes fadeIn {
+                0% { opacity: 0; transform: translateY(20px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+            .hover-grow {
+                transition: transform 0.3s ease;
+            }
+            .hover-grow:hover {
+                transform: scale(1.05);
+            }
+        </style>
     </head>
     <body class="is-loading">
 
@@ -28,9 +43,9 @@
                 <div id="main">
                     <div class="front">
                         <header>
-                            <span class="avatar"><img src="images/m1.png" width="122" height="122" /></span>
+                            <span class="avatar"><img src="images/M1.jpeg" width="180" height="180" style="border-radius: 50%; box-shadow: 0 0 20px rgba(0,0,0,0.2); transition: all 0.3s ease; object-fit: cover; max-width: 100%;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 25px rgba(0,0,0,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 20px rgba(0,0,0,0.2)';" /></span>
                             <h1>Mowaz Bin Ismail</h1>
-                            <p>Student at Shilkhali High School</p>
+                            <p><span style="font-size: 1.1em; color: #4a4a4a;">Student at Shilkhali High School</span></p>
                         </header>
                         
                         <nav>
@@ -40,12 +55,14 @@
                         </nav>
                         
                         <footer>
-                            <ul class="icons">
-                                <li><a href="https://github.com/MowazBinIsmail" class="fa-github">GitHub: @MowazBinIsmail</a></li>
-                                <li><a href="mailto:mowazbinismail69@gamil.com" class="fa-envelope">mowazbinismail69(@)gmail.com</a></li>
-                                <li><a href="https://www.facebook.com/mowazbinismail/" class="fa-facebook">Send a Request on Facebook</a></li>
-				
-
+                            <ul class="icons" style="margin-top: 30px;">
+                                <li><a href="https://github.com/MowazBinIsmail" class="fa-github" style="transition: all 0.3s ease; padding: 10px 15px; border-radius: 5px;" onmouseover="this.style.backgroundColor='#24292e'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='';">GitHub: @MowazBinIsmail</a></li>
+                                <li><a href="mailto:mowazbinismail69@gamil.com" class="fa-envelope" style="transition: all 0.3s ease; padding: 10px 15px; border-radius: 5px;" onmouseover="this.style.backgroundColor='#d44638'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='';">mowazbinismail69(@)gmail.com</a></li>
+                                <li><a href="https://www.facebook.com/mowazbinismail/" class="fa-facebook" style="transition: all 0.3s ease; padding: 10px 15px; border-radius: 5px;" onmouseover="this.style.backgroundColor='#1877f2'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='';">Send a Request on Facebook</a></li>
+                                <li><a href="https://www.instagram.com/mowazbinismail" class="fa-instagram" style="transition: all 0.3s ease; padding: 10px 15px; border-radius: 5px;" onmouseover="this.style.backgroundColor='#E4405F'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='';">Send a Request on Instagram</a></li>
+                                <li><a href="https://x.com/mowazbinismail" class="fa-twitter" style="transition: all 0.3s ease; padding: 10px 15px; border-radius: 5px;" onmouseover="this.style.backgroundColor='#000000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='';">Follow on X (Twitter)</a></li>
+                                <li><a href="https://www.threads.net/@mowazbinismail" class="fa-at" style="transition: all 0.3s ease; padding: 10px 15px; border-radius: 5px;" onmouseover="this.style.backgroundColor='#000000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='';">Follow on Threads</a></li>
+                                
                             </ul>
                             <span id="linkHoverText"></span>
                         </footer>
@@ -56,11 +73,30 @@
                             <h2>About Me</h2>
                             <div class="card_wrapper">
 							
-							<p>
-								I am currently studying in Shilkhali High School. I like to learn new things everyday and want
-								to implement them in projects. Every thing counts. And every small improvement makes you better
-								than yesterday.
-							</p>
+							<div class="about-content" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+                                <p style="line-height: 1.6; margin-bottom: 20px; font-size: 1.1em;">
+                                    I am currently studying at Shilkhali High School with a passion for learning and personal growth. Every day presents new opportunities to expand my knowledge and skills.
+                                </p>
+                                
+                                <div class="interests" style="margin-top: 30px;">
+                                    <h3 style="color: #3c3c3c; margin-bottom: 15px;">My Interests</h3>
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                                            <span style="position: absolute; left: 0; color: #4a90e2;">▹</span> Continuous Learning
+                                        </li>
+                                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                                            <span style="position: absolute; left: 0; color: #4a90e2;">▹</span> Project Implementation
+                                        </li>
+                                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                                            <span style="position: absolute; left: 0; color: #4a90e2;">▹</span> Personal Development
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <p style="font-style: italic; color: #666; margin-top: 20px; text-align: center;">
+                                    "Every small improvement makes you better than yesterday."
+                                </p>
+                            </div>
                                 <!--ul class="project_list">
       
                                     <li>
