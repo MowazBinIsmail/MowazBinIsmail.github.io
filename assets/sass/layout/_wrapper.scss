@@ -20,18 +20,56 @@
 		min-height: 100%;
 		padding: _size(element-margin);
 		z-index: 2;
+		background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 100%);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 20px;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+		}
 
 		> * {
 			z-index: 1;
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
 		}
 
 		&:before {
 			content: '';
 			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: radial-gradient(circle at center, rgba(74,144,226,0.03) 0%, transparent 70%);
+			pointer-events: none;
+		}
+
+		@include breakpoint(xlarge) {
+			padding: (_size(element-margin) * 1.5);
+		}
+
+		@include breakpoint(large) {
+			padding: _size(element-margin);
+		}
+
+		@include breakpoint(medium) {
+			padding: (_size(element-margin) * 0.75);
+		}
+
+		@include breakpoint(small) {
+			padding: (_size(element-margin) * 0.5);
 		}
 
 		@include breakpoint(xxsmall) {
-			padding: (_size(element-margin) * 0.5);
+			padding: (_size(element-margin) * 0.25);
 		}
 
 		body.is-ie & {
